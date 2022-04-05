@@ -1,0 +1,46 @@
+<div class="game">
+  <h4 class="title">Click Number of Pins Knocked Down</h4>
+  <div class="pins">
+    <button class="pin" *ngFor="let pin of pins" (click)="getScore(pin)">{{pin}}</button>
+  </div>
+  <h4 class="title">Scoreboard</h4>
+  <div class="scoreboard">
+    <div class="turn" *ngFor="let turn of turnList; let i=index">
+      <div class="head">
+        <h4>{{turn?.id}}</h4>
+      </div>
+      <div class="body">
+        <div class="turn-score">
+          <div class="strike">
+            <p>{{turn?.strike}}</p>
+          </div>
+          <div class="strike-result">
+            <p>{{turn?.strikeResult}}</p>
+          </div>
+          <div class="strike-result" *ngIf="i === 9">
+            <p>{{turn?.strikeResult2}}</p>
+          </div>
+        </div>
+        <div class="total-turn-score">
+          <p>{{turn?.totalTurnScore}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="turn">
+      <div class="head">
+        <h4>Current Turn Score</h4>
+      </div>
+      <div class="body">
+        <p>{{game?.currentTurn?.totalTurnScore}}</p>
+      </div>
+    </div>
+    <div class="turn">
+      <div class="head">
+        <h4>Max Possible Score</h4>
+      </div>
+      <div class="body">
+        <p>{{game?.totalPossibleScore}}</p>
+      </div>
+    </div>
+  </div>
+</div>

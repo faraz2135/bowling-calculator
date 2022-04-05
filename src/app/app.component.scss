@@ -1,0 +1,49 @@
+.title{
+  margin: 0;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.pins{
+  display: flex;
+  margin-bottom: 10px;
+
+  .pin{
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin: 5px;
+  }
+}
+.scoreboard{
+  display: flex;
+
+  .turn{
+    width: 100%;
+    text-align: center;
+    border: 2px solid black;
+
+    .head{
+      border-bottom: 2px solid black;
+    }
+
+    .body{
+      .turn-score{
+        display: flex;
+
+        .strike, .strike-result {
+          width: 100%;
+        }
+
+        .strike-result{
+          border-left: 2px solid black;
+          border-bottom: 2px solid black;
+          min-height: 52.4px;
+        }
+      }
+      p{
+        min-height: 1rem;
+      }
+    }
+  }
+}
